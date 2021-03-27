@@ -63,7 +63,29 @@ console.log(isLeapYear(2012));*/
         return hexCode;
     }
 
-    console.log(randomHex());
+    // console.log(randomHex());
+
+    //codewars questions 
+
+    function toCamelCase(str){
+        let arr
+        let finalArr = []
+        str.includes('-') ? arr = str.split('-') : arr = str.split('_')
+
+        for (i = 0; i < arr.length; i++) {
+          if (arr[i] === arr[0]) {
+              finalArr.push(arr[i])
+            continue
+          } else {
+            let word = arr[i][0].toUpperCase() + arr[i].slice(1)
+            finalArr.push(word)
+          }
+        }
+        const finalStr = finalArr.join('')
+        return finalStr
+      }
+
+    toCamelCase('the_stealth_warrior')
 
    
 
