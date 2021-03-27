@@ -65,7 +65,7 @@ console.log(isLeapYear(2012));*/
 
     // console.log(randomHex());
 
-    //codewars questions 
+//codewars questions 
 
     function toCamelCase(str){
         let arr
@@ -73,19 +73,32 @@ console.log(isLeapYear(2012));*/
         str.includes('-') ? arr = str.split('-') : arr = str.split('_')
 
         for (i = 0; i < arr.length; i++) {
-          if (arr[i] === arr[0]) {
-              finalArr.push(arr[i])
+            if (arr[i] === arr[0]) {
+                finalArr.push(arr[i])
             continue
-          } else {
+            } else {
             let word = arr[i][0].toUpperCase() + arr[i].slice(1)
             finalArr.push(word)
-          }
+            }
         }
         const finalStr = finalArr.join('')
         return finalStr
-      }
+    }
 
-    toCamelCase('the_stealth_warrior')
+    // toCamelCase('the_stealth_warrior')
+
+    function validatePIN (pin) {
+        for (const num of pin) {
+          if (num == '0' || num == '1' || num == '2' || num == '3' || num == '4' || num == '5' || num == '6' || num == '7' || num == '8' || num == '9') {
+              continue
+          }
+          else {
+              return false
+          }
+        }
+
+        return pin.length == 4 || pin.length == 6 ? true : false
+      }
 
    
 
